@@ -1,10 +1,10 @@
 const fs = require("fs");
-const process = require("process");
+// const process = require("process");
 const request = require("request");
 const prompt = require("prompt");
 
 prompt.start();
-prompt.get([], (err, result) => {
+prompt.get(["term"], (err, result) => {
   if (err) {
     console.log(err.message);
   } else {
@@ -36,9 +36,6 @@ prompt.get([], (err, result) => {
                   if (err) {
                     console.log("there was an error writing to file");
                   }
-                  //   else {
-                  //     console.log(`${byteWritten} characaters written`);
-                  //   }
                 }
               );
             }
@@ -47,5 +44,4 @@ prompt.get([], (err, result) => {
       }
     });
   }
-  //   console.log(result.term);
 });
